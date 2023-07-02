@@ -1,0 +1,238 @@
+import numpy as np
+ import numpy as np
+l1=[1,2,3,4] 
+arry1=np.array(l1) 
+arry1
+array([1, 2, 3, 4])
+l2=[11,22,33,44]
+l2
+[11, 22, 33, 44]
+l=[l1,l2]
+l
+[[1, 2, 3, 4], [11, 22, 33, 44]]
+array_2D=np.array(l)
+array_2D
+array([[ 1,  2,  3,  4],
+       [11, 22, 33, 44]])
+array_2D.shape 
+(2, 4)
+array_2D.dtype 
+dtype('int32')
+np.zeros(3,'int') 
+array([0, 0, 0])
+np.ones(3)
+array([1., 1., 1.])
+np.ones([3,3]) 
+array([[1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.]])
+np.ones(3)
+array([1., 1., 1.])
+np.empty
+np.empty(3)
+array([1., 1., 1.])
+np.eye(4)
+array([[1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.]])
+np.arange(10)
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+np.arange(0,50,2)
+np.arange(0,50,2)
+array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32,
+       34, 36, 38, 40, 42, 44, 46, 48])
+np.arange(0,10,1)
+#1 create 1D numpy array with integers feom 10 to 9
+np.arange(0,10,1)
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+#2 create 2D numpy array with shape (3,3) and full it with zeros
+np.zeros([3,3])
+array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]])
+3
+#3 create 3D numpy array with shape (2,3,4) and full it with ones
+np.ones([2,3,4])
+array([[[1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.]],
+
+       [[1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.]]])
+np.random.randint(low=1, high=100, size=10)
+#4 create numpy array with 10 random integers between 1 to 100
+np.random.randint(low=1, high=100, size=10)
+array([59, 94, 83, 95,  5, 10, 28, 64, 28, 17])
+np.random.uniform(low=0, high=1, size=10)
+#5 create numpy array with 10 random float between 0 to 1
+np.random.uniform(low=0, high=1, size=10)
+array([0.30233744, 0.46856442, 0.89999209, 0.1483753 , 0.91372156,
+       0.97941233, 0.56533627, 0.00240605, 0.84128644, 0.74799339])
+np.arange(0, 0.5, 0.1)
+#6 create numpy array with 5 equally spcaced between 0 to 1
+np.arange(0, 0.5, 0.1)
+array([0. , 0.1, 0.2, 0.3, 0.4])
+np.arange(0, 5, 1)
+#7 create numpy array with 5 equally spcaced between 0 to 10
+np.arange(0, 5, 1)
+array([0, 1, 2, 3, 4])
+#8 create numpy array with 5 equally spcaced between -1 to 1
+#8 create numpy array with 5 equally spcaced between -1 to 1
+np.arange(-1, 0.5, 0.3)
+array([-1. , -0.7, -0.4, -0.1,  0.2])
+#9 create numpy array with sine values of angles between 0 to 2pi
+np.sin(np.pi*2)
+-2.4492935982947064e-16
+#10 create numpy array with cosine values of angles between 0 to pi
+#Using Arrays & Scalers
+# create 2x2 numpy array and multiply by 2
+num=np.array([[1,8],[4,5]])
+num
+num*2
+array([[ 2, 16],
+       [ 8, 10]])
+# create 3x3 numpy array and add 5
+num1=np.array([[1,8,2],[4,5,8],[9,8,7]])
+num1+5
+array([[ 6, 13,  7],
+       [ 9, 10, 13],
+       [14, 13, 12]])
+# create 4x4 numpy array and sub 10
+num2=np.array([[1,8,2,5],[4,5,8,7],[9,8,7,1],[5,8,7,1]])
+num2-10
+array([[-9, -2, -8, -5],
+       [-6, -5, -2, -3],
+       [-1, -2, -3, -9],
+       [-5, -2, -3, -9]])
+8
+# create 5x5 numpy array and divide 2
+num3=np.array([[1,8,2,5],[4,5,8,7],[9,8,7,1],[5,8,7,1],[5,88,57,1]])
+num3/2
+array([[ 0.5,  4. ,  1. ,  2.5],
+       [ 2. ,  2.5,  4. ,  3.5],
+       [ 4.5,  4. ,  3.5,  0.5],
+       [ 2.5,  4. ,  3.5,  0.5],
+       [ 2.5, 44. , 28.5,  0.5]])
+# create 6x6 numpy array and calculate square root
+# create 6x6 numpy array and calculate square root
+num4=np.array([[1,8,2,5],[4,5,8,7],[9,8,7,1],[5,9,10,1],[15,28,47,18]])
+p=np.sqrt(num4)
+p
+array([[1.        , 2.82842712, 1.41421356, 2.23606798],
+       [2.        , 2.23606798, 2.82842712, 2.64575131],
+       [3.        , 2.82842712, 2.64575131, 1.        ],
+       [2.23606798, 3.        , 3.16227766, 1.        ],
+       [3.87298335, 5.29150262, 6.8556546 , 4.24264069]])
+# create 2x2 numpy array and calculate their product using the np.matmul()
+a=np.array([[1,8],[4,5]])
+b=np.array([[2,10],[3,5]])
+c=np.matmul(a,b)
+c
+array([[26, 50],
+       [23, 65]])
+8,
+# create 3x3 numpy array and calculate their product using the np.dot()
+a=np.array([[1,8,4],[2,5,6],[4,5,1]])
+b=np.array([[0,2,10],[7,3,8],[8,5,9]])
+do=np.dot(a,b)
+do
+array([[ 88,  46, 110],
+       [ 83,  49, 114],
+       [ 43,  28,  89]])
+0:5
+#Lec03- Indexing Arrays
+arr=np.arange(0,11)
+arr[1]
+arr[0:5]
+array([0, 1, 2, 3, 4])
+#
+#Create a 1D NumPy array with the integers from 0 to 9.
+#Extract the 3rd element from the array.
+n=np.arange(0,10,1)
+n
+n[3]
+​
+3
+x=np.random.rand(3,3)
+x
+
+#Create a 2D NumPy array with shape (3, 3) and fill it with random numbers.
+#Extract the element at row 2, column 1.
+x=np.random.rand(3,3)
+x
+​
+array([[0.61125475, 0.95032159, 0.9507863 ],
+       [0.0785329 , 0.02583427, 0.13462382],
+       [0.15774165, 0.54588136, 0.2620035 ]])
+4
+#Create a 2D NumPy array with shape (4, 4) and fill it with random numbers.
+#Extract the subarray
+y=np.random.rand(4,4)
+y
+​
+array([[0.41145034, 0.51928029, 0.2427457 , 0.56881532],
+       [0.92367591, 0.52773284, 0.66980008, 0.17092904],
+       [0.94337367, 0.37647875, 0.35390771, 0.67723777],
+       [0.54961806, 0.18999113, 0.8219848 , 0.97199177]])
+arr=np.arange(0,9)
+#Create a 1D NumPy array with the integers from 0 to 9.
+#Copy a slice of the array consisting of the first 3 elements.
+arr=np.arange(0,9)
+arr[0:3]
+​
+array([0, 1, 2])
+#Create a 2D NumPy array with shape (3, 3) and fill it with random numbers.
+#Copy a slice of the array consisting of the first 2 rows and the first 2 columns.
+x[:2,:2]
+​
+array([[0.61125475, 0.95032159],
+       [0.0785329 , 0.02583427]])
+np.arange(0, 9)
+#Create a 1D NumPy array with the integers from 0 to 9.
+#Reshape the array into a 2D array with shape (3, 3).
+w=np.arange(0, 9).reshape((3,3))
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+2
+#Create a 2D NumPy array with shape (4, 4) and fill it with random numbers.
+#Reshape the array into a 1D array
+left= np.hsplit(w, [2])
+left
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+~\AppData\Local\Temp\ipykernel_7520\1885666469.py in <module>
+      1 #Create a 2D NumPy array with shape (4, 4) and fill it with random numbers.
+      2 #Reshape the array into a 1D array
+----> 3 left= np.hsplit(w, [2])
+      4 left
+
+NameError: name 'w' is not defined
+
+import numpy as np
+from numpy.random import randn
+arr = randn(5,5)
+arr
+​
+array([[-1.37805705, -1.15985115,  1.58692525, -0.66638715,  0.58932602],
+       [ 0.70449941,  0.78405438, -0.79272229, -0.83321729, -0.1877876 ],
+       [ 0.08961848, -1.66586209,  0.73841022,  1.35516874,  1.15976562],
+       [ 1.355598  ,  1.46625326, -3.22536495, -0.63073265,  0.52749783],
+       [ 0.28812931, -0.22492536, -1.03755029, -0.60511526, -0.71024675]])
+arr
+2+1.5*(arr)
+array([[-0.06708557,  0.26022328,  4.38038787,  1.00041927,  2.88398903],
+       [ 3.05674911,  3.17608156,  0.81091657,  0.75017406,  1.7183186 ],
+       [ 2.13442772, -0.49879313,  3.10761533,  4.0327531 ,  3.73964843],
+       [ 4.03339699,  4.19937989, -2.83804743,  1.05390102,  2.79124675],
+       [ 2.43219397,  1.66261197,  0.44367457,  1.09232711,  0.93462987]])
+A=np.array([-2,5,4,-8,0])
+np.sort(A)
+array([-8, -2,  0,  4,  5])
+-
+-np.sort(A)
+array([ 8,  2,  0, -4, -5])
+np.sort(-A)
+array([-5, -4,  0,  2,  8])
