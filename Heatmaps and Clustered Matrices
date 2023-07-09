@@ -1,0 +1,50 @@
+import numpy as np
+from numpy.random import randn
+import pandas as pd
+# Import the stats library from numpy
+from scipy import stats
+# These are the plotting modules adn libraries we'll use:
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sns
+# Command so that plots appear in the iPython Notebook
+%matplotlib inline
+
+
+flight_dframe = sns.load_dataset('flights')
+flight_dframe.head()
+
+
+flight_dframe = flight_dframe.pivot("month","year","passengers")
+#Show
+flight_dframe
+
+
+sns.heatmap(flight_dframe)
+
+
+sns.heatmap(flight_dframe, linewidths=.5)
+
+
+ # We also have the option to annotate each cell
+sns.heatmap(flight_dframe,annot=True,fmt='d')
+
+
+sns.heatmap(flight_dframe,cmap="YlGn",linewidths=.5)
+
+sns.clustermap(flight_dframe,col_cluster=False)
+
+sns.clustermap(flight_dframe,standard_scale=0)
+
+
+w=pd.read_csv('Weather1.csv') #weather data
+w_m=f=w[(w['city']=='Muscat')]
+T=w_m[['year','month','T']]
+T
+
+
+T=T.pivot('year','month','T')
+T
+
+
+sns.heatmap(T,cmap="YlGn",linewidths=.5)
