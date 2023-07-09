@@ -1,0 +1,55 @@
+import numpy as np
+from numpy.random import randn
+import pandas as pd
+# Import the stats library from numpy
+from scipy import stats
+# These are the plotting modules adn libraries we'll use:
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sns
+# Command so that plots appear in the iPython Notebook
+%matplotlib inline
+
+
+
+tips = sns.load_dataset("tips")
+tips
+
+
+
+sns.lmplot(x="total_bill",y="tip",data=tips)
+
+
+slope,intercept,r_value,p_value,std_err= stats.linregress(tips['total_bill'],tips['tip'])
+print("y="+str(np.round(slope,2))+"x+"+str(np.round(intercept,2)))
+
+
+sns.lmplot("total_bill","tip",tips,ci=100) 
+
+
+sns.lmplot("total_bill", "tip", tips,order=3,
+scatter_kws={"marker": "o", "color": "indianred"},
+line_kws={"linewidth": 1, "color": "blue"})
+
+
+sns.lmplot("total_bill", "tip", tips,fit_reg=False)
+
+
+
+tips["tip_pect"]=100*(tips['tip']/tips['total_bill'])
+sns.lmplot("size", "tip_pect", tips);
+
+
+sns.lmplot("size", "tip_pect", tips, x_estimator=np.mean);
+
+
+sns.lmplot("total_bill", "tip_pect", tips, hue="sex",markers=["x","o"])
+
+
+sns.lmplot("total_bill", "tip_pect", tips, hue="day")
+
+
+sns.regplot("total_bill","tip_pect",tips)
+
+
+sns.regplot("total_bill","tip_pect",tips)
